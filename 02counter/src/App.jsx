@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
 
- let [counter,setCounter] = useState(0)
+ let [counter,setCounter] = useState(15)
 
  
 
@@ -13,30 +13,35 @@ function App() {
 
   const addValue = () => {
     console.log("clicked add", counter);
-    //counter = counter + 1;
-    {
-      if(counter === 20){
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+
+    // {
+    //   if(counter === 20){
          
-        setCounter(counter) // If the counter is already 20, do not increment further.
+    //     setCounter(counter) // If the counter is already 20, do not increment further.
         
         
-      }
-      else {
-        setCounter(counter + 1)  // Increment the counter by 1 if it's less than 20.
-      }
-    }
+    //   }
+    //   else {
+    //     setCounter(counter + 1)  // Increment the counter by 1 if it's less than 20.
+    //   }
+    // }
     
     
   }
 
   const removeValue = () => {
     console.log("clicked remove", counter);
-    if(counter ===  0){
-      setCounter(counter)
-    }
-    else {
-      setCounter( counter -1 )
-    }
+    setCounter( counter -1 )
+    // if(counter ===  0){
+    //   setCounter(counter)
+    // }
+    // else {
+    //   setCounter( counter -1 )
+    // }
    
   }
   return (
