@@ -47,7 +47,7 @@ function App() {
                             amount={amount}
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setAmount(amount)}
-                            selectCurrency={to}
+                            selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
                     </div>
@@ -66,12 +66,12 @@ function App() {
                             amount={convertedAmount}
                             currencyOptions={options}
                             onCurrencyChange={(currency) => setTo(currency)}
-                            selectCurrency={from}
+                            selectCurrency={to}
                             amountDisable
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                        CONVRT
+                        Convert {from.toUpperCase()} to {to.toUpperCase()}
                     </button>
                 </form>
             </div>
