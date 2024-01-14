@@ -2,14 +2,14 @@ import conf from "../conf.js"
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
-    Client = new Client();
+    client = new Client();
     account;
 
     constructor() {
-        this.Client
+        this.client
         .setEndpoint(conf.appwriteUrl)
         .setProject(conf.appwriteProjectId);
-        this.account = new Account(this.Client);
+        this.account = new Account(this.client);
     }
 
     async createAccount({email,password,name}) {
@@ -60,7 +60,7 @@ export class AuthService {
 
 const authServies = new AuthService();
 
-export default AuthService;
+export default authServies;
 
 
 
